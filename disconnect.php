@@ -1,4 +1,4 @@
-<?
+<?php
 function disconnect()
 {
 	setcookie("user", "", time() - 3600);

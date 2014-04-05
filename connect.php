@@ -20,15 +20,16 @@ foreach ($accounts as $elem)
 		if ($elem['passwd'] == $passwd)
 		{
 			setcookie("user", $login, time() + 3600);
+			header("Location: /ft_shop/page_acceuil.php");
 			return ;
 		}
 		else
 		{
-			echo "Mot de passe incorrect";
+			header("Location: /ft_shop/page_acceuil.php?error=passwd");
 			return ;
 		}
 	}
 }
-echo "Utilisateur inexistant";
+header("Location: /ft_shop/page_acceuil.php?error=user");
 return ;
 ?>
