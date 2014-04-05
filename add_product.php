@@ -1,5 +1,5 @@
 <?php
-if ($_POST['name'] == "" || $_POST['price'] == "" || $_POST['quantity'] == "" || $_POST['category'] == "" || $_POST['sub-category'] == "")
+if ($_POST['name'] == "" || $_POST['price'] == "" || $_POST['quantity'] == "" || $_POST['category'] == "" || $_POST['sub_category'] == "")
 {
 	echo "Un champ est vide";
 	return ;
@@ -8,7 +8,7 @@ $name = $_POST['name'];
 $price = $_POST['price'];
 $quantity = $_POST['quantity'];
 $category = $_POST['category'];
-$sub_category = $_POST['sub-category'];
+$sub_category = $_POST['sub_category'];
 
 $tab = array("name" => $name, "price"=>$price, "quantity"=>$quantity, "category"=>$category, "sub_category"=>$sub_category);
 $accounts = file_get_contents("private/products.csv");
@@ -21,7 +21,7 @@ else
 	{
 		if ($accounts[$key]['name'] == $name)
 		{
-			echo "Utilisateur deja enregistre";
+			echo "Produit deja enregistre";
 			return ;
 		}
 	}
