@@ -1,10 +1,5 @@
 <?php
-if ($_POST['login'] == "")
-{
-	echo "Rediriger vers ouverture de session";
-	return ;
-}
-$login = $_POST['login'];
+$login = $_COOKIE['user'];
 $tab = array("login" => $login);
 if ($_POST['name'] != "")
    $tab['name'] = $_POST['name'];

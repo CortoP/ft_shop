@@ -1,4 +1,5 @@
 <?PHP
+
 	echo "<!DOCTYPE>\n";
 	echo "<html>\n";
 	echo "<head>\n";
@@ -8,10 +9,10 @@
 	echo "	<h1>SHOP 42</h1>\n";
 	if (isset($_COOKIE["user"]))
 	{
-		echo "	<p>Bonjour" . $_COOKIE["user"]["login"] . "</p>\n";
+		echo "	<p>Bonjour " . $_COOKIE["user"] . ",</p>\n";
 		echo "	<a href=modif_user.html>Modifier les information de mon compte</a>\n";
 	}
-	if (isset($_COOKIE["user"]["admin"]))
+	else if (isset($_COOKIE["user"]["admin"]))
 	{
 		echo "	<a href=\"add_product\">Ajouter un produit</a>\n";
 	}
