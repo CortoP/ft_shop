@@ -29,13 +29,13 @@
 				$i++;
 			}
 		}
-		if ($i < 8 && $page == 0)
+		if ($i < 9 && $page == 0)
 			return;
-		if ($i < 8 && $page > 0)
+		if ($i < 9 && $page > 0)
 			echo "<a href=\"/ft_shop/index?product=".$category."&page=". ($page - 1) ."\" class=\"link_page_before\">Page precedente</a>\n";
-		if ($i == 8 && $product[$i + $page * 9] && $page == 0)
+		if ($i == 9 && $product[$i + $page * 9] && $page == 0)
 			echo "<a href=\"/ft_shop/index?product=informatique&page=". ($page + 1) ."\" class=\"link_page_after\">Page suivante</a>";
-		if ($i == 8 && $product[$i + $page * 9] && $page > 0)
+		if ($i == 9 && $product[$i + $page * 9] && $page > 0)
 		{
 			echo "<a class=\"link_page_before\" href=/ft_shop/index?product=informatique&page=". ($page - 1) ."\">Page precedente</a>\n";
 			echo "<a class=\"link_page_after\" href=/ft_shop/index?product=informatique&page=". ($page + 1) ."\">Page suivante</a>\n";
