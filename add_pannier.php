@@ -5,6 +5,7 @@ $quantity = $_POST['quantity'];
 if (!is_numeric($quantity))
 {
 	echo "Veuillez rentrer une quantite";
+	header("Location: /ft_shop/index.php");
 	return ;
 }
 $products = file_get_contents("private/products.csv");
@@ -12,6 +13,7 @@ $products = unserialize($products);
 if (count($products) == 0 || count($products[0]) == 0)
 {
 	echo "Le produit n existe pas";
+	header("Location: /ft_shop/index.php");
 	return ;
 }
 if (isset($_COOKIE['pannier']))
@@ -23,6 +25,7 @@ foreach ($products as $elem)
 		if ($elem['quantity'] < $quantity)
 		{
 			echo "Il ne reste que ".$elem['quantity']." de ".$name."(s)";
+			header("Location: /ft_shop/index.php");
 			return ;
 		}
 		if (isset($_COOKIE["pannier"]))
@@ -58,4 +61,5 @@ foreach ($products as $elem)
 	}
 }
 echo "Produit inexistant";
+header("Location: /ft_shop/index.php");
 ?>

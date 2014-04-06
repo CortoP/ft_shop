@@ -54,7 +54,7 @@
 		echo "	<div class=\"nav\">\n";
 		echo "		<div><a href=\"/ft_shop/index?product=informatique&page=0\" class=\"nav\">Informatique</a></div>\n";			
 		echo "		<div><a href=\"/ft_shop/index?product=livre&page=0\" class=\"nav\">Livre</a></div>\n";		
-		echo "		<div><a href=\"/ft_shop/index?product=hi_fi&page=0\" class=\"nav\">HI-fi</a></div>\n";		
+		echo "		<div><a href=\"/ft_shop/index?product=hi_fi&page=0\" class=\"nav\">Hi-fi</a></div>\n";		
 		echo "	</div>\n";
 		echo "</div>\n";
 		echo "<div class=middle>\n";
