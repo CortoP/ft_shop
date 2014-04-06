@@ -1,6 +1,6 @@
 <?PHP
 
-$name = $_GET['name'];
+$name = $_POST['name'];
 $quantity = $_POST['quantity'];
 if (!is_numeric($quantity))
 {

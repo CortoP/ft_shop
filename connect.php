@@ -15,12 +15,12 @@ if (count($accounts) == 0 || count($accounts[0]) == 0)
 }
 foreach ($accounts as $elem)
 {
-	if ($elem['login'] == $login)
+	if ($elem['login'] == $login || $elem['root'] == $login)
 	{
 		if ($elem['passwd'] == $passwd)
 		{
 			setcookie("user", $login, time() + 3600);
-			if ($login == "root" && $passwd == hash('whirlpool', 42))
+			if ($login == "root")
 			   setcookie("root", "true", time() + 3600);
 			header("Location: /ft_shop/index.php");
 			return ;
