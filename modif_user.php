@@ -22,6 +22,7 @@ if ($_POST['oldpasswd'] != "" && $_POST['newpasswd'] != "" && $_POST['passwd2'] 
 	if ($newpasswd != $passwd2)
 	{
 		echo "Confirmation du pasword incorrect\n";
+		header("Location: /ft_shop/index.php");
 		return ;
 	}
 }
@@ -37,7 +38,7 @@ else
 		{
 			 if ($modif_passw == true && $elem['passwd'] != $oldpasswd)
 			 {
-				echo "Ancien mot de passe incorrect ";
+				header("Location: /ft_shop/index.php");
 				return ;
 			 }
 			 else if ($modif_passw == true)
