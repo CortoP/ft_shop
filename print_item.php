@@ -14,6 +14,7 @@
 	function print_item($page, $product, $category)
 	{
 		$i = 0;
+		$product = array_values($product);
 		foreach ($product as $key => $value)
 		{
 			if ($key >= $page * 9 && $key < ($page + 1) *9)

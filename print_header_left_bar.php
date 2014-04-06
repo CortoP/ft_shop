@@ -13,7 +13,8 @@
 		echo "	<h1>SHOP</h1>\n";
 		echo "	<img src=\"resource_css/42.png\" id=\"title42\" />\n";
 		echo "</div>\n";
-		echo "<div class=\"left_bar\">\n";
+		echo "<div class=\"bloc\">\n";
+		echo "<div class=\"side_bar\">\n";
 		echo "	<div class=\"info_user\">\n";
 		if (isset($_GET["disconnect"]))
 			disconnect();
@@ -29,6 +30,7 @@
 				echo "		<a href=\"remove_product2.php\">Supprimer un produit</a><br/>\n";
 				echo "		<a href=\"root_remove_user.php\">Supprimer un compte client</a><br/>\n";
 			}
+			echo "</div>\n";
 		}
 		else
 		{
@@ -46,6 +48,7 @@
 					echo "<p class=\"error\">Le password est incorrect<p>";
 			}
 			echo "		<a href=\"add_user2.php\">Je souhaite me creer un compte</a>\n";
+			echo "	</div>\n";
 		}
 		echo "	<div class=\"nav\">\n";
 		echo "		<div><a href=\"/ft_shop/index.php\">Accueil</a></div>\n";			
