@@ -11,10 +11,10 @@ $quantity = $_POST['quantity'];
 $category = $_POST['category'];
 $sub_category = $_POST['sub_category'];
 if (!copy($img, "private/img/$name.img"))
-	{ 
-		echo "L'adress de l'image est invalide";
-		return;
-	}
+{
+	echo "L'adress de l'image est invalide";
+	return;
+}
 $img = "private/img/$name.img";
 $tab = array("name" => $name, "price"=>$price, "quantity"=>$quantity, "category"=>$category, "sub_category"=>$sub_category, "img"=>$img);
 $accounts = file_get_contents("private/products.csv");
