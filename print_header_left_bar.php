@@ -18,14 +18,15 @@
 		if (isset($_COOKIE["user"]))
 		{
 			echo "		<p>Bonjour " . $_COOKIE["user"] . ",</p>\n";
-			echo "		<a href=modif_user.html>Modifier les information de mon compte</a>\n";
-			echo "		<a href=\"/ft_shop/index?disconnect\">Se deconnecter</a>\n";
-		}
-		else if (isset($_COOKIE["user"]["admin"]))
-		{
-			echo "		<a href=\"add_product\">Ajouter un produit</a>\n";
-			echo "		<a href=\"modif_product\">Modifier un produit</a>\n";
-			echo "		<a href=\"remove_product\">Supprimer un produit</a>\n";
+			echo "		<a href=modif_user2.php>Modifier les information de mon compte</a><br/>\n";
+			echo "		<a href=\"/ft_shop/index?disconnect\">Se deconnecter</a><br/>\n";
+			if (isset($_COOKIE["root"]))
+			{
+				echo "		<a href=\"add_product2.php\">Ajouter un produit</a><br/>\n";
+				echo "		<a href=\"modif_product2.php\">Modifier un produit</a><br/>\n";
+				echo "		<a href=\"remove_product2.php\">Supprimer un produit</a><br/>\n";
+				echo "		<a href=\"root_remove_user.php\">Supprimer un compte client</a><br/>\n";
+			}
 		}
 		else
 		{
@@ -42,7 +43,7 @@
 				if ($_GET["error"] == "passwd")
 					echo "<p class=\"error\">Le password est incorrect<p>";
 			}
-			echo "		<a href=\"add_user.html\">Je souhaite me creer un compte</a>\n";
+			echo "		<a href=\"add_user2.php\">Je souhaite me creer un compte</a>\n";
 		}
 		echo "	<div class=\"nav\">\n";
 		echo "		<div><a href=\"/ft_shop/index.php\">Accueil</a></div>\n";			
