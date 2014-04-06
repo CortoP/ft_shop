@@ -6,7 +6,7 @@
 	print_header_left_bar();
 ?>
 		<form align="center" action="modif_product.php" method="POST">
-			  Name : <input type='text' name='name' value="" /><br/>
+			  Name : <input type='text' name='name' value="" required/><br/>
 			  Prix : <input type='number' name='price' value="" /><br/>
 			  Quantite : <input type='number' name='quantity' value="" /><br/>
 			  Categorie : <input type='text' name='category' value="" /><br/>

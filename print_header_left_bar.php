@@ -36,8 +36,8 @@
 		{
 			echo "		<p>Bonjour cher visiteur</p>\n";
 			echo "		<form action=\"connect.php\" method=\"post\">\n";
-			echo "			<input type=\"text\" name=\"login\" size=\"72\" class=\"text\"><br />\n";
-			echo "			<input type=\"password\" name=\"passwd\" size=\"72\" class=\"text\">\n";
+			echo "			<input type=\"text\" name=\"login\" size=\"72\" class=\"text\" required><br />\n";
+			echo "			<input type=\"password\" name=\"passwd\" size=\"72\" class=\"text\" required>\n";
 			echo "			<input type=\"submit\" value=\"Se connecter\" id=\"button\">\n";
 			echo "		</form>\n";
 			if (isset($_GET["error"]))
