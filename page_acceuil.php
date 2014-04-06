@@ -43,7 +43,7 @@
 		echo "		<a href=\"add_user.html\">Je souhaite me creer un compte</a>\n";
 	}
 	echo "	<div class=\"nav\">\n";
-	echo "		<div><a href=\"/ft_shop/page_acceuil\">Acceuil</a></div>\n";			
+	echo "		<div><a href=\"/ft_shop/page_acceuil.php\">Acceuil</a></div>\n";			
 	echo "		<div><a href=\"/ft_shop/page_acceuil?product=informatique\">Informatique</a></div>\n";			
 	echo "		<div><a href=\"/ft_shop/page_acceuil?product=livre\">Livre</a></div>\n";		
 	echo "		<div><a href=\"/ft_shop/page_acceuil?product=hi_fi\">HI-fi</a></div>\n";		
@@ -53,7 +53,7 @@
 	if (isset($_GET["product"]))
 	{
 		if ($_GET["product"] === "informatique")
-			echo "<p>informatique product</p>";
+			echo print_info_item();
 		else if ($_GET["product"] === "livre")
 			echo "<p>livre product</p>";
 		else if ($_GET["product"] === "hi_fi")
