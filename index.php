@@ -3,6 +3,7 @@
 	include 'print_item.php';
 	include 'print_header_left_bar.php';
 	include 'print_right_bar_bottom.php';
+	include 'print_product.php';
 	print_header_left_bar();
 	if (isset($_GET["product"]))
 	{
@@ -15,5 +16,7 @@
 		else
 			echo "<p>rien</p>";
 	}
+	else if (isset($_GET["item"]))
+		print_product($_GET["item"]);
 	print_right_bar_bottom();
 ?>
