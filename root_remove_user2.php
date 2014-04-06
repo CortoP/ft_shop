@@ -6,10 +6,9 @@
 	print_header_left_bar();
 ?>
 	<body>
-		<form align="center" action="remove_user.php" method="POST">
+		<form align="center" action="root_remove_user.php" method="POST">
 		  Supprimer le compte : <br/>
 			  Identifiant : <input type='text' name='login' value="" required/><br/>
-			  Mot de passe : <input type='password' name='passwd' value="" required/><br/>
 			  <input type="submit" name="submit" value="OK" />
 		</form>
 <?php

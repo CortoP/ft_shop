@@ -28,7 +28,7 @@
 				echo "		<a href=\"add_product2.php\">Ajouter un produit</a><br/>\n";
 				echo "		<a href=\"modif_product2.php\">Modifier un produit</a><br/>\n";
 				echo "		<a href=\"remove_product2.php\">Supprimer un produit</a><br/>\n";
-				echo "		<a href=\"root_remove_user.php\">Supprimer un compte client</a><br/>\n";
+				echo "		<a href=\"root_remove_user2.php\">Supprimer un compte client</a><br/>\n";
 			}
 			echo "</div>\n";
 		}
