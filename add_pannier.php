@@ -14,7 +14,8 @@ if (count($products) == 0 || count($products[0]) == 0)
 	echo "Le produit n existe pas";
 	return ;
 }
-$cook = unserialize($_COOKIE['pannier']);
+if (isset($_COOKIE['pannier']))
+   $cook = unserialize($_COOKIE['pannier']);
 foreach ($products as $elem)
 {
 	if ($elem['name'] == $name)
@@ -51,6 +52,7 @@ foreach ($products as $elem)
 			setcookie("pannier", serialize(array(array("name" =>  $name, "quantity" => $quantity,  "price" => $quantity * $elem['price']))), time() + 1800);
 			$elem['quantity'] -= $quantity;
 			file_put_contents("private/products.csv", serialize($products));
+			header("Location: /ft_shop/index.php");
 			return ;
 		}
 	}
