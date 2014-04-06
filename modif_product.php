@@ -7,9 +7,19 @@ if ($_POST['name'] == "")
 $name = $_POST['name'];
 $tab = array("name" => $name);
 if ($_POST['price'] != "")
-   $tab['price'] = $_POST['price'];
+{
+	if (is_numeric($_POST['price']))
+   	   $tab['price'] = $_POST['price'];
+	else
+		echo "Le prix nest pas numerique";
+}
 if ($_POST['quantity'] != "")
-   $tab['quantity'] = $_POST['quantity'];
+{
+	if (is_numeric($_POST['quantity']))
+   	   $tab['quantity'] = $_POST['quantity'];
+	else
+		echo "Le prix nest pas numerique";
+}
 if ($_POST['category'] != "")
    $tab['category'] = $_POST['category'];
 if ($_POST['sub_category'] != "")
