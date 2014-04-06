@@ -2,6 +2,7 @@
 if ($_POST['name'] == "")
 {
 	echo "Le produit n existe pas";
+	header("Location: /ft_shop/index.php");
 	return ;
 }
 $name = $_POST['name'];
@@ -11,14 +12,20 @@ if ($_POST['price'] != "")
 	if (is_numeric($_POST['price']))
    	   $tab['price'] = $_POST['price'];
 	else
+	{
 		echo "Le prix nest pas numerique";
+		header("Location: /ft_shop/index.php");
+	}
 }
 if ($_POST['quantity'] != "")
 {
 	if (is_numeric($_POST['quantity']))
    	   $tab['quantity'] = $_POST['quantity'];
 	else
+	{
 		echo "Le prix nest pas numerique";
+		header("Location: /ft_shop/index.php");
+	}
 }
 if ($_POST['category'] != "")
    $tab['category'] = $_POST['category'];
@@ -30,6 +37,7 @@ $products = unserialize($products);
 if (count($products) == 0 || count($products[0]) == 0)
 {
 	echo "Le produit n existe pas";
+	header("Location: /ft_shop/index.php");
 	return ;
 }
 else
@@ -51,4 +59,5 @@ else
 }
 print_r($products);
 file_put_contents("private/products.csv", serialize($products));
+header("Location: /ft_shop/index.php");
 ?>
