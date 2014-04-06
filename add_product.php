@@ -4,6 +4,10 @@ if ($_POST['name'] == "" || $_POST['price'] == "" || $_POST['quantity'] == "" ||
 	echo "Un champ est vide";
 	return ;
 }
+if (!is_numeric($_POST['price']) || !is_numeric($_POST['quantity']))
+{
+	echo "Un champ est mal renseigne";
+}
 $name = $_POST['name'];
 $price = $_POST['price'];
 $img = $_POST['img'];
