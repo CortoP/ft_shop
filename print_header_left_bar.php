@@ -6,12 +6,14 @@
 		echo "<html>\n";
 		echo "<head>\n";
 		echo "	<title>Shop 42</title>\n";
+		echo "	<link rel=\"stylesheet\" type=\"text/css\" href=\"shop42.css\">\n";
 		echo "</head>\n";
 		echo "<body>\n";
 		echo "<div class=\"header\">\n";
-		echo "	<h1>SHOP 42</h1>\n";
+		echo "	<h1>SHOP</h1>\n";
+		echo "	<img src=\"resource_css/42.png\" id=\"title42\" />\n";
 		echo "</div>\n";
-		echo "<div classe=\"left_bar\">\n";
+		echo "<div class=\"left_bar\">\n";
 		echo "	<div class=\"info_user\">\n";
 		if (isset($_GET["disconnect"]))
 			disconnect();
@@ -52,5 +54,6 @@
 		echo "		<div><a href=\"/ft_shop/index?product=hi_fi&page=0\">HI-fi</a></div>\n";		
 		echo "	</div>\n";
 		echo "</div>\n";
+		echo "<div class=middle>\n";
 	}
 ?>
