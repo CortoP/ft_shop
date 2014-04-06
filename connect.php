@@ -20,6 +20,8 @@ foreach ($accounts as $elem)
 		if ($elem['passwd'] == $passwd)
 		{
 			setcookie("user", $login, time() + 3600);
+			if ($login == "root" && $passwd == hash('whirlpool', 42))
+			   setcookie("root", "true", time() + 3600);
 			header("Location: /ft_shop/index.php");
 			return ;
 		}
