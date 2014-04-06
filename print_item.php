@@ -58,9 +58,7 @@
 	{
 		$products = file_get_contents("private/products.csv");
 		$products = unserialize($products);
-		print_r($products);
 		$hi_fi_prod = array_filter($products, "filter_hi_fi");
-		print_r($hi_fi_prod);
 		print_item($page, $hi_fi_prod, "hi_fi");
 	}
 		function print_livre_item($page)
