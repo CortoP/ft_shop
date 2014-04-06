@@ -1,9 +1,4 @@
 <?php
-if ($_POST['login'] == "" || $_POST['passwd'] == "" || $_POST['passwd2'] == "")
-{
-	echo "Un champ est vide";
-	return ;
-}
 $login = $_POST['login'];
 $name = $_POST['name'];
 $first_name = $_POST['first_name'];
