@@ -44,7 +44,7 @@
 		echo "		<a href=\"add_user.html\">Je souhaite me creer un compte</a>\n";
 	}
 	echo "	<div class=\"nav\">\n";
-	echo "		<div><a href=\"/ft_shop/index.php\">Acceuil</a></div>\n";			
+	echo "		<div><a href=\"/ft_shop/index.php\">Accueil</a></div>\n";			
 	echo "		<div><a href=\"/ft_shop/index?product=informatique&page=0\">Informatique</a></div>\n";			
 	echo "		<div><a href=\"/ft_shop/index?product=livre\">Livre</a></div>\n";		
 	echo "		<div><a href=\"/ft_shop/index?product=hi_fi\">HI-fi</a></div>\n";		
