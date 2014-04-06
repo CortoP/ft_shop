@@ -35,4 +35,6 @@ else
 	array_push($accounts, $tab);
 }
 file_put_contents("private/users.csv", serialize($accounts));
+header("Location: /ft_shop/index.php?");
+return ;
 ?>
