@@ -2,7 +2,7 @@
 function print_right_bar_bottom()
 {
 	echo "</div>\n";
-	echo "<div class=\"side_bar\">\n";
+	echo "<div class=\"pannier\">\n";
 	if (isset($_COOKIE["pannier"]))
 	{
 		$array = unserialize($_COOKIE["pannier"]);

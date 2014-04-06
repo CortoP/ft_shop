@@ -46,8 +46,7 @@ h1
 {
 	float: left;
 	margin-top: 15px;
-	width: 916px;
-	height: 580px;
+	width: 915px;
 }
 .bloc
 {
@@ -55,11 +54,6 @@ h1
 	margin: auto;
 }
 
-.info_user
-{
-	text-align: left;
-	text-decoration: none;
-}
 .menu_user
 {
 	text-align: center;
@@ -67,4 +61,38 @@ h1
 	text-decoration: none;
 	line-height: 150%
 }
-			
+
+.nav_title
+{
+	margin-left: 10px;
+}
+
+.nav
+{
+	text-align: left;
+	margin-left: 25px;
+	color: black;
+	text-decoration: none;
+	line-height: 125%
+}
+
+.product
+{
+	width: 300;
+	float: left;
+}	
+
+.vignette
+{
+	width: 250px
+}
+
+.product_name
+{
+
+}
+
+.product_price
+{
+
+}

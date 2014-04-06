@@ -19,25 +19,16 @@
 		{
 			if ($key >= $page * 9 && $key < ($page + 1) *9)
 			{
-			echo "		<a href=\"/ft_shop/index?item=".$value["name"]."\">\n";
-			echo "		<div class=\"product\">\n";
-			echo "			<img src=\"" . $value["img"] . "\"class=\"object_img\">\n";
-			echo "			<p class=\"object_name\">".$value["name"]."</p>\n";
-			echo "			<p class=\"obect_price\">".$value["price"]."</p>\n";
-			echo "		</div>\n";
-			echo "		</a>\n";
-			$i++;
+				echo "		<a href=\"/ft_shop/index?item=".$value["name"]."\">\n";
+				echo "		<div class=\"product\">\n";
+				echo "			<img class=\"vignette\" src=\"" . $value["img"] . "\"class=\"object_img\">\n";
+				echo "			<p class=\"object_name\">".$value["name"]."</p>\n";
+				echo "			<p class=\"obect_price\">".$value["price"]."</p>\n";
+				echo "		</div>\n";
+				echo "		</a>\n";
+				$i++;
 			}
 		}
-//		while ($i < 9 && $product[$i + $page * 10])
-//		{
-//			echo "		<div class=\"product\">\n";
-//			echo "			<img src=\"" . $product[$i + $page * 10]["img"] . "\"class=\"object_img\">\n";
-//			echo "			<p class=\"object_name\">".$product[$i + $page * 10]["name"]."</p>\n";
-//			echo "			<p class=\"obect_price\">".$product[$i + $page * 10]["price"]."</p>\n";
-//			echo "		</div>\n";
-//			$i++;
-//		}
 		if ($i < 8 && $page == 0)
 			return;
 		if ($i < 8 && $page > 0)
