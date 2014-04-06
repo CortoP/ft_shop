@@ -1,16 +1,22 @@
 <?php
-if ($_POST['name'] == "" || $_POST['price'] == "" || $_POST['quantity'] == "" || $_POST['category'] == "" || $_POST['sub_category'] == "")
+if ($_POST['name'] == "" || $_POST['price'] == "" || $_POST['quantity'] == "" || $_POST['category'] == "" || $_POST['sub_category'] == "" || $_POST['img'] == "")
 {
 	echo "Un champ est vide";
 	return ;
 }
 $name = $_POST['name'];
 $price = $_POST['price'];
+$img = $_POST['img'];
 $quantity = $_POST['quantity'];
 $category = $_POST['category'];
 $sub_category = $_POST['sub_category'];
-
-$tab = array("name" => $name, "price"=>$price, "quantity"=>$quantity, "category"=>$category, "sub_category"=>$sub_category);
+if (!copy($img, "private/img/$name.img"))
+	{ 
+		echo "L'adress de l'image est invalide";
+		return;
+	}
+$img = "private/img/$name.img";
+$tab = array("name" => $name, "price"=>$price, "quantity"=>$quantity, "category"=>$category, "sub_category"=>$sub_category, "img"=>$img);
 $accounts = file_get_contents("private/products.csv");
 $accounts = unserialize($accounts);
 if (count($accounts) == 0 || count($accounts[0]) == 0)

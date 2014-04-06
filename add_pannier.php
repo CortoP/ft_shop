@@ -32,18 +32,18 @@ foreach ($products as $elem)
 					$prod['quantity'] += $quantity;
 					$elem['quantity'] -= $quantity;
 					file_put_contents("private/products.csv", serialize($products));
-					header("Location: /ft_shop/page_acceuil.php?error=user");
+					header("Location: /ft_shop/index.php?error=user");
 				}
 			}
 			array_push($_COOKIE['pannier'], array("name" => $name, "quantity" => $quantity));
 			$elem['quantity'] -= $quantity;
 			file_put_contents("private/products.csv", serialize($products));
-			header("Location: /ft_shop/page_acceuil.php?error=user");
+			header("Location: /ft_shop/index.php?error=user");
 		}
 		setcookie("pannier", array(array("name" =>  $name, "quantity" => $quantity)), time() + 1800);
 		$elem['quantity'] -= $quantity;
 		file_put_contents("private/products.csv", serialize($products));
-		header("Location: /ft_shop/page_acceuil.php?error=user");
+		header("Location: /ft_shop/index.php?error=user");
 	}
 }
 echo "Produit inexistant";

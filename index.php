@@ -1,5 +1,6 @@
 <?PHP
 	include 'disconnect.php';
+	include 'print_item.php';
 	echo "<!DOCTYPE>\n";
 	echo "<html>\n";
 	echo "<head>\n";
@@ -17,7 +18,7 @@
 	{
 		echo "		<p>Bonjour " . $_COOKIE["user"] . ",</p>\n";
 		echo "		<a href=modif_user.html>Modifier les information de mon compte</a>\n";
-		echo "		<a href=\"/ft_shop/page_acceuil?disconnect\">Se deconnecter</a>\n";
+		echo "		<a href=\"/ft_shop/index?disconnect\">Se deconnecter</a>\n";
 	}
 	else if (isset($_COOKIE["user"]["admin"]))
 	{
@@ -43,17 +44,17 @@
 		echo "		<a href=\"add_user.html\">Je souhaite me creer un compte</a>\n";
 	}
 	echo "	<div class=\"nav\">\n";
-	echo "		<div><a href=\"/ft_shop/page_acceuil.php\">Acceuil</a></div>\n";			
-	echo "		<div><a href=\"/ft_shop/page_acceuil?product=informatique\">Informatique</a></div>\n";			
-	echo "		<div><a href=\"/ft_shop/page_acceuil?product=livre\">Livre</a></div>\n";		
-	echo "		<div><a href=\"/ft_shop/page_acceuil?product=hi_fi\">HI-fi</a></div>\n";		
+	echo "		<div><a href=\"/ft_shop/index.php\">Acceuil</a></div>\n";			
+	echo "		<div><a href=\"/ft_shop/index?product=informatique&page=0\">Informatique</a></div>\n";			
+	echo "		<div><a href=\"/ft_shop/index?product=livre\">Livre</a></div>\n";		
+	echo "		<div><a href=\"/ft_shop/index?product=hi_fi\">HI-fi</a></div>\n";		
 	echo "	</div>\n";
 	echo "</div>\n";
 	echo "<div classe=\"midle\">\n";
 	if (isset($_GET["product"]))
 	{
 		if ($_GET["product"] === "informatique")
-			echo print_info_item();
+			echo print_info_item($_GET["page"]);
 		else if ($_GET["product"] === "livre")
 			echo "<p>livre product</p>";
 		else if ($_GET["product"] === "hi_fi")

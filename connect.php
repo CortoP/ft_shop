@@ -20,16 +20,16 @@ foreach ($accounts as $elem)
 		if ($elem['passwd'] == $passwd)
 		{
 			setcookie("user", $login, time() + 3600);
-			header("Location: /ft_shop/page_acceuil.php");
+			header("Location: /ft_shop/index.php");
 			return ;
 		}
 		else
 		{
-			header("Location: /ft_shop/page_acceuil.php?error=passwd");
+			header("Location: /ft_shop/index.php?error=passwd");
 			return ;
 		}
 	}
 }
-header("Location: /ft_shop/page_acceuil.php?error=user");
+header("Location: /ft_shop/index.php?error=user");
 return ;
 ?>
