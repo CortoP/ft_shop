@@ -15,20 +15,20 @@
 		echo "</div>\n";
 		echo "<div class=\"bloc\">\n";
 		echo "<div class=\"side_bar\">\n";
-		echo "	<div class=\"info_user\">\n";
+		echo "	<div>\n";
 		if (isset($_GET["disconnect"]))
 			disconnect();
 		if (isset($_COOKIE["user"]))
 		{
-			echo "		<p>Bonjour " . $_COOKIE["user"] . ",</p>\n";
-			echo "		<a href=modif_user2.php class=\"info_user\">Modifier les information de mon compte</a><br/>\n";
-			echo "		<a href=\"/ft_shop/index?disconnect\" class=\"info_user\">Se deconnecter</a><br/>\n";
+			echo "		<p id=\"info_user\">Bonjour " . $_COOKIE["user"] . ",</p>\n";
+			echo "		<a href=modif_user2.php class=\"menu_user\">Parametre du compte</a><br/>\n";
+			echo "		<a href=\"/ft_shop/index?disconnect\" class=\"menu_user\">Se deconnecter</a><br/>\n";
 			if (isset($_COOKIE["root"]))
 			{
-				echo "		<a href=\"add_product2.php\" class=\"info_user\">Ajouter un produit</a><br/>\n";
-				echo "		<a href=\"modif_product2.php\" class=\"info_user\">Modifier un produit</a><br/>\n";
-				echo "		<a href=\"remove_product2.php\" class=\"info_user\">Supprimer un produit</a><br/>\n";
-				echo "		<a href=\"root_remove_user2.php\" class=\"info_user\">Supprimer un compte client</a><br/>\n";
+				echo "		<a href=\"add_product2.php\" class=\"menu_user\">Ajouter un produit</a><br/>\n";
+				echo "		<a href=\"modif_product2.php\" class=\"menu_user\">Modifier un produit</a><br/>\n";
+				echo "		<a href=\"remove_product2.php\" class=\"menu_user\">Supprimer un produit</a><br/>\n";
+				echo "		<a href=\"root_remove_user2.php\" class=\"menu_user\">Supprimer un compte client</a><br/>\n";
 			}
 			echo "</div>\n";
 		}

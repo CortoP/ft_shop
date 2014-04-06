@@ -57,11 +57,14 @@ h1
 
 .info_user
 {
+	text-align: left;
+	text-decoration: none;
+}
+.menu_user
+{
 	text-align: center;
 	color: black;
-	text-decoration: normal;
-	margin-right: 15px;
-	margin-top: 5px
-	margin-left: 15px;
+	text-decoration: none;
+	line-height: 150%
 }
 			
