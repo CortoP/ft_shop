@@ -7,12 +7,20 @@ if (isset($_COOKIE['pannier']))
 	{
 		if ($prod['name'] == $name)
 		{
-			unset($cart[$key]);
-			$accounts = file_get_contents("provate/products.csv");
-			$accounts = unserialize($accounts);
-			setcookie("pannier", serialize($cart), time() + 3600);
-			header("Location: /ft_shop/index.php");
-			return ;
+			$products = file_get_contents("provate/products.csv");
+			$products = unserialize($products);
+			foreach($products as $k => $elem)
+			{
+				if ($elem['name'] == $prod['name'])
+				{
+					$products[$k]['quantity'] += $prod['quantity'];
+					unset($cart[$key]);
+					setcookie("pannier", serialize($cart), time() + 3600);
+					file_put_contents("private/products.csv", serialize($products));
+					header("Location: /ft_shop/index.php");
+					return ;
+				}
+			}
 		}
 	}
 }
