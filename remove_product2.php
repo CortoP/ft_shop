@@ -7,7 +7,7 @@
 ?>
 		<form align="center" action="remove_product.php" method="POST">
 		  Supprimer le compte : <br/>
-			  Produit : <input type='text' name='name' value="" /><br/>
+			  Produit : <input type='text' name='name' value="" required/><br/>
 			  <input type="submit" name="submit" value="OK" />
 		</form>
 <?php
