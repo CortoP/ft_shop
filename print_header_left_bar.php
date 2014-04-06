@@ -10,7 +10,7 @@
 		echo "</head>\n";
 		echo "<body>\n";
 		echo "<div class=\"header\">\n";
-		echo "	<a href=\"/ft_shop/index.php\" color:\"black\" text-decoration:\"none\"><h1>SHOP</h1>\n";
+		echo "	<a href=\"/ft_shop/index.php\"><h1>SHOP</h1>\n";
 		echo "	<img src=\"resource_css/42.png\" id=\"title42\" /></a>\n";
 		echo "</div>\n";
 		echo "<div class=\"bloc\">\n";
@@ -36,8 +36,8 @@
 		{
 			echo "		<p>Bonjour cher visiteur</p>\n";
 			echo "		<form action=\"connect.php\" method=\"post\">\n";
-			echo "			<input type=\"text\" name=\"login\" size=\"72\" class=\"text\" required><br />\n";
-			echo "			<input type=\"password\" name=\"passwd\" size=\"72\" class=\"text\" required>\n";
+			echo "			Login => <input type=\"text\" name=\"login\" size=\"20\" class=\"text\" required><br />\n";
+			echo "			Password <input type=\"password\" name=\"passwd\" size=\"20\" class=\"text\" required>\n";
 			echo "			<input type=\"submit\" value=\"Se connecter\" id=\"button\">\n";
 			echo "		</form>\n";
 			if (isset($_GET["error"]))
