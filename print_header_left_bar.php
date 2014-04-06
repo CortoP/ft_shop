@@ -10,8 +10,8 @@
 		echo "</head>\n";
 		echo "<body>\n";
 		echo "<div class=\"header\">\n";
-		echo "	<h1>SHOP</h1>\n";
-		echo "	<img src=\"resource_css/42.png\" id=\"title42\" />\n";
+		echo "	<a href=\"/ft_shop/index.php\" color:\"black\" text-decoration:\"none\"><h1>SHOP</h1>\n";
+		echo "	<img src=\"resource_css/42.png\" id=\"title42\" /></a>\n";
 		echo "</div>\n";
 		echo "<div class=\"bloc\">\n";
 		echo "<div class=\"side_bar\">\n";

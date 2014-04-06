@@ -5,7 +5,7 @@
 	}
 	function filter_hi_fi($elem)
 	{
-		return ($elem["category"] == "Hi-fi");
+		return ($elem["category"] == "Hi_fi");
 	}
 	function filter_livre($elem)
 	{
@@ -23,7 +23,7 @@
 				echo "		<div class=\"product\">\n";
 				echo "			<img class=\"vignette\" src=\"" . $value["img"] . "\"class=\"object_img\">\n";
 				echo "			<p class=\"object_name\">".$value["name"]."</p>\n";
-				echo "			<p class=\"obect_price\">".$value["price"]."</p>\n";
+				echo "			<p class=\"obect_price\">".$value["price"]." euro</p>\n";
 				echo "		</div>\n";
 				echo "		</a>\n";
 				$i++;

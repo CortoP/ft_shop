@@ -21,7 +21,7 @@ function print_right_bar_bottom()
 		echo "	</form>\n";
 	}
 	else
-		echo "	<p>votre pannier est vide</p>\n";
+		echo "	<p>Votre pannier est vide</p>\n";
 	echo "</div>\n";
 	echo "</body>\n";
 	echo "</html>\n";
