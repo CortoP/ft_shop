@@ -20,7 +20,7 @@ foreach ($products as $elem)
 	{
 		if ($elem['quantity'] < $quantity)
 		{
-			echo "Il ne reste que $elem['quantity'] $name(s)";
+			echo "Il ne reste que ".$elem['quantity']." de ".$name."(s)";
 			return ;
 		}
 		if (isset($_COOKIE["pannier"]))
@@ -41,10 +41,9 @@ foreach ($products as $elem)
 			file_put_contents("private/products.csv", serialize($products));
 			header("Location: /ft_shop/index.php?error=user");
 		}
-		setcookie("pannier", array(array("name" =>  $name, "quantity" => $quantity,  "price" => $quantity * $elem['price')), time() + 1800);
+		setcookie("pannier", array(array("name" =>  $name, "quantity" => $quantity,  "price" => $quantity * $elem['price'])), time() + 1800);
 		$elem['quantity'] -= $quantity;
 		file_put_contents("private/products.csv", serialize($products));
-		header("Location: /ft_shop/index.php?error=user");
 	}
 }
 echo "Produit inexistant";
