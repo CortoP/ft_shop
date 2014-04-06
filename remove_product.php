@@ -2,7 +2,7 @@
 if ($_POST['name'] == "")
 {
 	echo "Veuillez saisir un nom de produit";
-	header("Location: /ft_shop/index.php");
+	header("Location: /index.php");
 	return ;
 }
 $name = $_POST['name'];
@@ -15,10 +15,10 @@ foreach ($products as $key => $elem)
 		unset($products[$key]);
 		unlink("private/img/".$name.".img");
 		file_put_contents("private/products.csv", serialize($products));
-	header("Location: /ft_shop/index.php");
+	header("Location: /index.php");
 		return ;
 	}
 }
 echo "Produit non present";
-header("Location: /ft_shop/index.php");
+header("Location: /index.php");
 ?>

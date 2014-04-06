@@ -8,9 +8,9 @@ foreach ($accounts as $key => $elem)
 	{
 		unset($accounts[$key]);
 		file_put_contents("private/users.csv", serialize($accounts));
-		header("Location: /ft_shop/index.php");
+		header("Location: /index.php");
 		return ;
 	}
 }
-header("Location: /ft_shop/index.php");
+header("Location: /index.php");
 ?>

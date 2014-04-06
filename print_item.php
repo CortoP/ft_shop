@@ -19,7 +19,7 @@
 		{
 			if ($key >= $page * 9 && $key < ($page + 1) *9)
 			{
-				echo "		<a href=\"/ft_shop/index?item=".$value["name"]."\">\n";
+				echo "		<a href=\"/index?item=".$value["name"]."\">\n";
 				echo "		<div class=\"product\">\n";
 				echo "			<img class=\"vignette\" src=\"" . $value["img"] . "\"class=\"object_img\">\n";
 				echo "			<p class=\"object_name\">".$value["name"]."</p>\n";
@@ -32,13 +32,13 @@
 		if ($i < 9 && $page == 0)
 			return;
 		if ($i < 9 && $page > 0)
-			echo "<a href=\"/ft_shop/index?product=".$category."&page=". ($page - 1) ."\" class=\"link_page_before\">Page precedente</a>\n";
+			echo "<a href=\"/index?product=".$category."&page=". ($page - 1) ."\" class=\"link_page_before\">Page precedente</a>\n";
 		if ($i == 9 && $product[$i + $page * 9] && $page == 0)
-			echo "<a href=\"/ft_shop/index?product=informatique&page=". ($page + 1) ."\" class=\"link_page_after\">Page suivante</a>";
+			echo "<a href=\"/index?product=informatique&page=". ($page + 1) ."\" class=\"link_page_after\">Page suivante</a>";
 		if ($i == 9 && $product[$i + $page * 9] && $page > 0)
 		{
-			echo "<a class=\"link_page_before\" href=/ft_shop/index?product=informatique&page=". ($page - 1) ."\">Page precedente</a>\n";
-			echo "<a class=\"link_page_after\" href=/ft_shop/index?product=informatique&page=". ($page + 1) ."\">Page suivante</a>\n";
+			echo "<a class=\"link_page_before\" href=/index?product=informatique&page=". ($page - 1) ."\">Page precedente</a>\n";
+			echo "<a class=\"link_page_after\" href=/index?product=informatique&page=". ($page + 1) ."\">Page suivante</a>\n";
 		}
 	}
 	function print_info_item($page)

@@ -5,6 +5,6 @@ function disconnect()
 	setcookie("pannier", "", time() - 3600);
 	setcookie("root", "false", time() - 3600);
 	setcookie("historic", "", time() - 3600);
-	header("Location: /ft_shop/index.php");
+	header("Location: /index.php");
 }
 ?>

@@ -17,12 +17,12 @@ if (isset($_COOKIE['pannier']))
 					unset($cart[$key]);
 					setcookie("pannier", serialize($cart), time() + 3600);
 					file_put_contents("private/products.csv", serialize($products));
-					header("Location: /ft_shop/index.php");
+					header("Location: /index.php");
 					return ;
 				}
 			}
 		}
 	}
 }
-header("Location: /ft_shop/index.php");
+header("Location: /index.php");
 ?>

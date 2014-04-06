@@ -13,7 +13,7 @@ $passwd2 = hash("whirlpool", $_POST['passwd2']);
 if ($passwd != $passwd2)
 {
 	echo "Confirmation du pasword incorrect\n";
-	header("Location: /ft_shop/index.php");
+	header("Location: /index.php");
 	return ;
 }
 $tab = array("login"=>$login, "passwd"=>$passwd, "name"=>$name , "first_name"=>$first_name , "mail"=>$mail , "address"=>$address , "zip"=>$zip);
@@ -28,13 +28,13 @@ else
 		if ($accounts[$key]['login'] == $login)
 		{
 			echo "Utilisateur deja enregistre";
-			header("Location: /ft_shop/index.php?error=user_reg");
+			header("Location: /index.php?error=user_reg");
 			return ;
 		}
 	}
 	array_push($accounts, $tab);
 }
 file_put_contents("private/users.csv", serialize($accounts));
-header("Location: /ft_shop/index.php?");
+header("Location: /index.php?");
 return ;
 ?>

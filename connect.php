@@ -22,16 +22,16 @@ foreach ($accounts as $elem)
 			setcookie("user", $login, time() + 3600);
 			if ($login == "root")
 			   setcookie("root", "true", time() + 3600);
-			header("Location: /ft_shop/index.php");
+			header("Location: /index.php");
 			return ;
 		}
 		else
 		{
-			header("Location: /ft_shop/index.php?error=passwd");
+			header("Location: /index.php?error=passwd");
 			return ;
 		}
 	}
 }
-header("Location: /ft_shop/index.php?error=user");
+header("Location: /index.php?error=user");
 return ;
 ?>
