@@ -46,19 +46,19 @@
 	echo "	<div class=\"nav\">\n";
 	echo "		<div><a href=\"/ft_shop/index.php\">Accueil</a></div>\n";			
 	echo "		<div><a href=\"/ft_shop/index?product=informatique&page=0\">Informatique</a></div>\n";			
-	echo "		<div><a href=\"/ft_shop/index?product=livre\">Livre</a></div>\n";		
-	echo "		<div><a href=\"/ft_shop/index?product=hi_fi\">HI-fi</a></div>\n";		
+	echo "		<div><a href=\"/ft_shop/index?product=livre&page=0\">Livre</a></div>\n";		
+	echo "		<div><a href=\"/ft_shop/index?product=hi_fi&page=0\">HI-fi</a></div>\n";		
 	echo "	</div>\n";
 	echo "</div>\n";
 	echo "<div classe=\"midle\">\n";
 	if (isset($_GET["product"]))
 	{
 		if ($_GET["product"] === "informatique")
-			echo print_info_item($_GET["page"]);
+			print_info_item($_GET["page"]);
 		else if ($_GET["product"] === "livre")
-			echo "<p>livre product</p>";
+			print_livre_item($_GET["page"]);
 		else if ($_GET["product"] === "hi_fi")
-			echo "<p>hi_fi product</p>";
+			print_hi_fi_item($_GET["page"]);
 		else
 			echo "<p>rien</p>";
 	}
